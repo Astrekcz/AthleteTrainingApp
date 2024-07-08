@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Athletes Diary</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <h1 th:text="'Welcome to your Diary'"></h1>
+</header>
+<main>
+    <section id="intro">
+        <h2 th:text="'Get Started with Your Tasks'"></h2>
+        <p th:text="'Manage your daily trainings efficiently and never forget anything.'"></p>
+        <a th:href="@{/Diary}" th:text="'Go to ToDo List'"></a>
+    </section>
+</main>
+<footer>
+    <p th:text="'&copy; ' + 2024 + ' Diary Application'">&copy; 2024 Diary Application</p>
+</footer>
+
+<script th:src="@{/scripts.js}"></script>
+
+</body>
+</html>
