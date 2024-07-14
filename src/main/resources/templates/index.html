@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Training Diary</title>
+    <link rel="stylesheet" th:href="@{/styles.css}">
+</head>
+<body>
+<h1>Welcome to Your Training Diary</h1>
+<nav>
+    <ul>
+        <li><a th:href="@{/diary/add}">Add New Entry</a></li>
+        <li><a th:href="@{/diary/view}">View Entries</a></li>
+    </ul>
+</nav>
+</body>
+</html>
