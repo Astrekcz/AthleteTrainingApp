@@ -1,9 +1,11 @@
-package com.example.athletestrainingdiary.service;
+package org.example.athletesdiary.service;
 
-import com.example.athletestrainingdiary.Model.Diary;
-import com.example.athletestrainingdiary.Model.dto.DiaryDto;
-import com.example.athletestrainingdiary.Repository.DiaryRepository;
+
 import lombok.RequiredArgsConstructor;
+import org.example.athletesdiary.Model.Diary;
+import org.example.athletesdiary.Model.Record.DiaryRecord;
+import org.example.athletesdiary.Model.dto.DiaryDto;
+import org.example.athletesdiary.Repository.DiaryRepository;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
@@ -21,14 +23,32 @@ public class DiaryServiceImpl implements DiaryService {
                 diaryDto.getTime(),
                 diaryDto.getTitle(),
                 diaryDto.getDurOfTraining(),
-                diaryDto.getWarmUp(),
-                diaryDto.getRuns(),
-                diaryDto.getDurOfrun(),
-                diaryDto.getDistanceOfrun()
+                diaryDto.getRuns()
+           //     diaryDto.getWarmUp(),
+
 
         );
         return diaryRepository.save(diary);
 
 
     }
+    @Override
+    public Diary createdDiary(DiaryRecord diaryRecord){
+        Diary diary = new Diary(
+                diaryRecord.date(),
+                diaryRecord.time(),
+                diaryRecord.Title(),
+                diaryRecord.DurOfTraining(),
+                diaryRecord.runs()
+
+
+
+        );
+        return diaryRepository.save(diary);
+
+
+    }
+
+
+
 }

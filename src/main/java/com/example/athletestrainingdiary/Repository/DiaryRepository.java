@@ -1,7 +1,8 @@
-package com.example.athletestrainingdiary.Repository;
+package org.example.athletesdiary.Repository;
 
 
-import com.example.athletestrainingdiary.Model.Diary;
+
+import org.example.athletesdiary.Model.Diary;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
